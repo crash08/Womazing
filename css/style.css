@@ -74,8 +74,8 @@ html, body {
 }
 
 .wrapper {
-  width: 100%;
   min-height: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -97,6 +97,7 @@ a {
 }
 
 img, svg {
+  max-width: 100%;
   display: block;
 }
 
@@ -125,10 +126,10 @@ img, svg {
 }
 
 .container {
-  width: 100%;
+  max-width: 1140px;
   height: 100%;
+  padding: 0 15px;
   margin: 0 auto;
-  padding: 0 245px;
 }
 
 .header__container {
@@ -193,9 +194,7 @@ img, svg {
   content: '';
   position: absolute;
   top: -85px;
-  right: 9px;
-  /* width: 770px;
-  height: 830px; */
+  right: 15px;
   width: 50%;
   height: 100%;
   background-color: var(--main-theme-color-2);
@@ -258,11 +257,6 @@ img, svg {
   position: relative;
 }
 
-.hero__img img {
-  width: 100%;
-  height: 100%;
-}
-
 .hero__img_01 {
 }
 .hero__img_02 {
@@ -320,11 +314,8 @@ img, svg {
   font-weight: 500;
 }
 
-.card__img {
-  margin-bottom: 24px;
-}
-
 .card__title {
+  margin-top: 24px;
   margin-bottom: 7px;
   font-size: 20px;
 }
@@ -418,10 +409,11 @@ img, svg {
 
 
 /* ============================================================================
-    #BENEFITS
+    #ABOUT
 ============================================================================ */
 
 .about {
+  margin-bottom: 130px;
 }
 .container {
 }
@@ -431,21 +423,36 @@ img, svg {
 
 .about__row {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.about__col {
+.about__col:nth-child(1) {
+  flex: 0 1 66.667%;
 }
+
+.about__col:nth-child(2) {
+  flex: 0 1 25%;
+}
+
 .about__slider {
+  /* margin-left: -60px;
+  padding-left: 60px; */
 }
 .about__img:not(:first-child) {
   display: none;
 }
 .about__content {
+  font-weight: 500;
 }
 .about__name {
+  margin-bottom: 28px;
+  font-size: 25px;
 }
 .about__text {
+  margin-bottom: 28px;
 }
 .about__link {
+  color: var(--main-theme-color-1);
 }
 
 

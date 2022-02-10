@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Womazing</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/ibg.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -17,7 +18,7 @@
         <a href="index.html" class="link-logo">
           <img src="img/logo.svg" alt="Логотип бренда Womazing">
         </a>
-        <nav class="nav">
+        <nav class="header__nav nav">
           <ul class="nav__list">
             <li class="nav__item">
               <a href="#" class="nav__link">Главная</a>
@@ -54,7 +55,7 @@
               </defs>
             </svg>
           </a>
-          <a href="tel:+74958235412" class="phone">+7 (495) 823-54-12</a>
+          <a href="tel:+74958235412" class="header__phone phone">+7 (495) 823-54-12</a>
           <a href="#" class="cart">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -143,21 +144,21 @@
           <div class="new__row">
             <div class="new__col">
               <div class="card">
-                <img class="card__img" src="img/index/new/01.jpg" alt="Футболка USA">
+                <img src="img/index/new/01.jpg" alt="Футболка USA">
                 <h3 class="card__title">Футболка USA</h3>
                 <p class="card__price"><span>$229</span><span>$129</span></p>
               </div>
             </div>
             <div class="new__col">
               <div class="card">
-                <img class="card__img" src="img/index/new/02.jpg" alt="Купальник Glow">
+                <img src="img/index/new/02.jpg" alt="Купальник Glow">
                 <h3 class="card__title">Купальник Glow</h3>
                 <p class="card__price"><span></span><span>$129</span></p>
               </div>
             </div>
             <div class="new__col">
               <div class="card">
-                <img class="card__img" src="img/index/new/03.jpg" alt="Свитшот Sweet Shot">
+                <img src="img/index/new/03.jpg" alt="Свитшот Sweet Shot">
                 <h3 class="card__title">Свитшот Sweet Shot</h3>
                 <p class="card__price"><span></span><span>$129</span></p>
               </div>
@@ -224,9 +225,76 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="container"></div>
+      <div class="footer__container container">
+        <div class="footer__row">
+          <a href="index.html" class="link-logo">
+            <img src="img/logo.svg" alt="Логотип бренда Womazing">
+          </a>
+          <nav class="footer__nav nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link">Главная</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Магазин</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">О бренде</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="tel:+74958235412" class="footer__phone phone">+7 (495) 823-54-12</a>
+        </div>
+        <div class="footer__row">
+          <div class="footer__col">
+            <p class="footer__copyright">© Все права защищены</p>
+            <a href="#" class="footer__politics">Политика конфиденциальности</a>
+            <a href="#" class="footer__offer">Политика конфиденциальности</a>
+          </div>
+          <div class="footer__col">
+            <nav class="footer__categories categories">
+              <ul class="categories__list">
+                <li class="categories__item">
+                  <a href="#" class="categories__link">Пальто</a>
+                </li>
+                <li class="categories__item">
+                  <a href="#" class="categories__link">Свитшоты</a>
+                </li>
+                <li class="categories__item">
+                  <a href="#" class="categories__link">Кардиганы</a>
+                </li>
+                <li class="categories__item">
+                  <a href="#" class="categories__link">Толстовки</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__col">
+            <a href="mailto:hello@womazing.com" class="footer__mail">hello@womazing.com</a>
+            <ul class="social__list">
+              <li class="social__item">
+                <span></span>
+              </li>
+              <li class="social__item">
+                <span></span>
+              </li>
+              <li class="social__item">
+                <span></span>
+              </li>
+            </ul>
+            <div class="payments">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
   </div>
+
+  <script src="js/ibg.js"></script>
 </body>
 
 </html>
