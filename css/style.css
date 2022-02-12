@@ -8,6 +8,10 @@
   --main-theme-color-2: #F1EADC;
   --header-height: 95px;
   --gap: 30px;
+  --swiper-pagination-bullet-width: 30px;
+  --swiper-pagination-bullet-height: 4px;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 6px;
 }
 
 
@@ -208,7 +212,7 @@ img, svg {
 
 .hero__container {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .hero__col {
@@ -217,21 +221,44 @@ img, svg {
 }
 
 .hero__col:nth-child(1) {
-  flex: 0 0 58%;
+  min-width: 100px;
+  flex: 0 0 52%;
   align-items: center;
 }
 
+.hero .swiper {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.hero .swiper-pagination-bullets.swiper-pagination-horizontal {
+  position: static;
+  width: 66%;
+  margin-top: 126px;
+  text-align: right;
+}
+
+.hero .swiper-pagination-bullet {
+  border-radius: 0;
+  background-color: #D1D1D1;
+  opacity: 1;
+  transition: background-color 0.2s ease;
+}
+
+.hero .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: black;
+}
+
 .hero__col:nth-child(2) {
-  flex: 0 0 42%;
+  flex: 0 0 48%;
   align-items: flex-end;
 }
 
-.hero__slider:not(:first-child) {
-  display: none;
+.hero__slider {
 }
 
 .hero__title {
-  width: 85%;
   margin-bottom: 45px;
   font-weight: 500;
   font-size: 55px;
@@ -239,7 +266,7 @@ img, svg {
 }
 
 .hero__content {
-  width: 59%;
+  width: 66%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -435,6 +462,7 @@ img, svg {
 
 .about__col:nth-child(1) {
   flex: 0 1 66.667%;
+  min-width: 100px;
 }
 
 .about__col:nth-child(2) {
@@ -446,8 +474,31 @@ img, svg {
   padding-left: 60px;
 } */
 
-.about__img:not(:first-child) {
-  display: none;
+.about .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.about .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 60px;
+}
+
+.about .swiper-pagination-bullet {
+  border-radius: 0;
+  background-color: white;
+  opacity: 0.36;
+  transition: background-color 0.2s ease;
+}
+
+.about .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: white;
+  opacity: 1;
+}
+
+.about__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about__content {
