@@ -13,7 +13,7 @@
 
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header class="header" id="header">
       <div class="header__container container">
         <a href="index.html" class="link-logo">
           <img src="img/logo.svg" alt="Логотип бренда Womazing">
@@ -21,7 +21,7 @@
         <nav class="header__nav nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#" class="nav__link">Главная</a>
+              <a href="#" class="nav__link active">Главная</a>
             </li>
             <li class="nav__item">
               <a href="#" class="nav__link">Магазин</a>
@@ -153,7 +153,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="hero__background"></div> -->
       </section>
       <section class="new">
         <div class="new__container container">
@@ -220,7 +219,8 @@
           <h2 class="about__title title">Команда мечты Womazing</h2>
           <div class="about__row">
             <div class="about__col">
-              <div class="swiper">
+              <div class="swiper-button-prev" id="swiperPrev"></div>
+              <div class="swiper-2">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <img src="../img/index/about/01.jpg" alt="Счастливые девушки" class="about__img">
@@ -234,6 +234,7 @@
                 </div>
                 <div class="swiper-pagination"></div>
               </div>
+              <div class="swiper-button-next" id="swiperNext"></div>
             </div>
             <div class="about__col">
               <div class="about__content">
@@ -260,7 +261,7 @@
           <nav class="footer__nav nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="#" class="nav__link">Главная</a>
+                <a href="#" class="nav__link active">Главная</a>
               </li>
               <li class="nav__item">
                 <a href="#" class="nav__link">Магазин</a>
