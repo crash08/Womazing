@@ -647,15 +647,15 @@ img, svg {
 }
 
 .social__item:nth-child(1) span {
-  background-image: url(/img/index/footer/instagram.svg);
+  background-image: url(../img/index/footer/instagram.svg);
 }
 
 .social__item:nth-child(2) span {
-  background-image: url(/img/index/footer/facebook.svg);
+  background-image: url(../img/index/footer/facebook.svg);
 }
 
 .social__item:nth-child(3) span {
-  background-image: url(/img/index/footer/twitter.svg);
+  background-image: url(../img/index/footer/twitter.svg);
 }
 
 .payments span {
