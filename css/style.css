@@ -126,7 +126,6 @@ img, svg {
   position: fixed;
   top: 0;
   left: 0;
-  /* background: white; */
   z-index: 10;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -160,6 +159,7 @@ img, svg {
 
 .nav {
   display: flex;
+  align-items: center;
   white-space: nowrap;
   font-size: 15px;
 }
@@ -181,10 +181,15 @@ img, svg {
 .header__right {
   flex: 0 0 255px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .header__call {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
   margin-right: 9px;
 }
 
@@ -355,10 +360,15 @@ img, svg {
 }
 
 .card {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-weight: 500;
+}
+.card__link_img {
+  position: relative;
 }
 
 .card__title {
@@ -381,7 +391,7 @@ img, svg {
   display: none;
 }
 
-.new__button {
+.button_white {
   padding: 22px 50px;
   color: var(--main-theme-color-1);
   border: 1px solid var(--main-theme-color-1);
@@ -593,6 +603,7 @@ img, svg {
 }
 
 .footer__col:nth-child(1) {
+  align-items: flex-start;
   font-size: 13px;
 }
 
@@ -603,7 +614,7 @@ img, svg {
 }
 
 .footer__col:nth-child(2) {
-  flex: 0 1 31.5%;
+  flex: 0 1 31%;
 }
 
 .footer__categories {
@@ -665,3 +676,226 @@ img, svg {
 }
 
 
+
+
+
+/* ============================================================================
+    #HOVER
+============================================================================ */
+
+.nav__link,
+.categories__link,
+.phone,
+.footer__mail,
+.footer__politics,
+.footer__offer,
+.about__link
+{
+  position: relative;
+  transition: color 0.5s ease;
+}
+
+.nav__link::after,
+.categories__link::after,
+.phone::after,
+.footer__mail::after,
+.footer__politics::after,
+.footer__offer::after,
+.about__link::after
+{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--main-theme-color-1);
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+.nav__link:not(.nav__link.active):hover::after,
+.categories__link:hover::after,
+.phone:hover::after,
+.footer__mail:hover::after,
+.footer__politics:hover::after,
+.footer__offer:hover::after,
+.about__link:hover::after
+{
+  transform: scale(1);
+}
+
+.nav__link:hover,
+.categories__link:hover,
+.phone:hover,
+.footer__mail:hover,
+.footer__politics:hover,
+.footer__offer:hover,
+.about__link:hover
+{
+  color: var(--main-theme-color-1);
+}
+
+
+
+
+
+.header__call {
+  transition: background-color 0.5s ease;
+}
+
+.header__call svg path {
+  transition: fill 0.5s ease;
+}
+
+.header__call:hover {
+  background-color: var(--main-theme-color-1);
+}
+
+.header__call:hover svg path {
+  fill: white;
+}
+
+
+
+
+
+.hero__button span,
+.button_white
+{
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.hero__button:hover span {
+  background-color: #509498;
+}
+
+.button_white:hover {
+  color: white;
+  background-color: var(--main-theme-color-1);
+}
+
+
+
+
+
+.card__link_img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url(../img/index/new/go.svg) center center no-repeat, rgba(110, 156, 159, 0.64);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card__link_img:hover::after {
+  opacity: 1;
+}
+
+
+
+
+
+/* ============================================================================
+    #CALLBACK POPUP
+============================================================================ */
+
+.callback-popup__wrap {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(110, 156, 159, 0.95);
+  z-index: 20;
+}
+
+.callback-popup {
+  position: relative;
+  background: white;
+}
+
+.callback-popup-form {
+  padding: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.callback-popup__close {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  width: 15px;
+  height: 15px;
+}
+
+.callback-popup__close span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  height: 1px;
+  background-color: black;
+  transform-origin: center;
+}
+
+.callback-popup__close span:nth-of-type(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.callback-popup__close span:nth-of-type(2) {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+.callback-popup__title {
+  margin-bottom: 35px;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.callback-popup form {
+  display: flex;
+  flex-direction: column;
+}
+
+.callback-popup__input {
+  height: 40px;
+  display: block;
+  margin-bottom: 35px;
+  border-bottom: 1px solid black;
+}
+
+.callback-popup__input::placeholder {
+  font-weight: 500;
+  color: #868686;
+}
+
+.callback-popup__button {
+  padding: 22px 108px;
+  color: white;
+  background-color: var(--main-theme-color-1);
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.callback-popup__button:hover {
+  background-color: #509498;
+}
+
+.callback-popup__input:focus {
+  outline: none;
+}
+
+.callback-popup-result {
+  padding: 70px;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+}
