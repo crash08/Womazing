@@ -78,6 +78,10 @@ html, body {
   scroll-behavior: smooth;
 }
 
+.lock {
+  overflow: hidden;
+}
+
 .wrapper {
   min-height: 100%;
   margin: 0 auto;
@@ -110,6 +114,22 @@ img, svg {
   font-weight: 500;
   font-size: 40px;
   line-height: 1.1;
+}
+
+.button {
+  padding: 22px 50px;
+}
+
+.button_color {
+  color: var(--font-color-white);
+  background-color: var(--main-theme-color-1);
+  border: none;
+}
+
+.button_white {
+  color: var(--main-theme-color-1);
+  background-color: transparent;
+  border: 1px solid var(--main-theme-color-1);
 }
 
 
@@ -292,7 +312,6 @@ img, svg {
 }
 .hero__button {
   display: flex;
-  color: var(--font-color-white);
 }
 
 .hero__button svg {
@@ -302,15 +321,13 @@ img, svg {
 .hero__button span {
   display: flex;
   align-items: center;
-  padding: 0 50px;
-  background-color: var(--main-theme-color-1);
 }
 
 .hero__img {
   position: relative;
 }
 
-.hero__img_02 {
+.hero__img-02 {
   position: absolute;
   top: 0;
   right: 0;
@@ -318,7 +335,7 @@ img, svg {
   margin-right: -26%;
 }
 
-.hero__img_03 {
+.hero__img-03 {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -367,13 +384,14 @@ img, svg {
   align-items: center;
   font-weight: 500;
 }
-.card__link_img {
+.card__link-img {
   position: relative;
 }
 
 .card__title {
   margin-top: 24px;
   margin-bottom: 7px;
+  font-weight: 500;
   font-size: 20px;
 }
 
@@ -389,12 +407,6 @@ img, svg {
 
 .card__price span:nth-of-type(1):empty {
   display: none;
-}
-
-.button_white {
-  padding: 22px 50px;
-  color: var(--main-theme-color-1);
-  border: 1px solid var(--main-theme-color-1);
 }
 
 
@@ -634,8 +646,11 @@ img, svg {
   font-size: 15px;
 }
 
-.social__list {
+.social {
   margin-bottom: 30px;
+}
+
+.social__list {
   display: flex;
 }
 
@@ -683,26 +698,12 @@ img, svg {
     #HOVER
 ============================================================================ */
 
-.nav__link,
-.categories__link,
-.phone,
-.footer__mail,
-.footer__politics,
-.footer__offer,
-.about__link
-{
+.link {
   position: relative;
   transition: color 0.5s ease;
 }
 
-.nav__link::after,
-.categories__link::after,
-.phone::after,
-.footer__mail::after,
-.footer__politics::after,
-.footer__offer::after,
-.about__link::after
-{
+.link::after {
   content: '';
   position: absolute;
   display: block;
@@ -713,25 +714,11 @@ img, svg {
   transition: transform 0.5s ease;
 }
 
-.nav__link:not(.nav__link.active):hover::after,
-.categories__link:hover::after,
-.phone:hover::after,
-.footer__mail:hover::after,
-.footer__politics:hover::after,
-.footer__offer:hover::after,
-.about__link:hover::after
-{
+.link:not(.nav__link.active):hover::after {
   transform: scale(1);
 }
 
-.nav__link:hover,
-.categories__link:hover,
-.phone:hover,
-.footer__mail:hover,
-.footer__politics:hover,
-.footer__offer:hover,
-.about__link:hover
-{
+.link:hover {
   color: var(--main-theme-color-1);
 }
 
@@ -759,9 +746,7 @@ img, svg {
 
 
 
-.hero__button span,
-.button_white
-{
+.button {
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
@@ -778,7 +763,7 @@ img, svg {
 
 
 
-.card__link_img::after {
+.card__link-img::after {
   content: '';
   position: absolute;
   top: 0;
@@ -791,7 +776,7 @@ img, svg {
   transition: opacity 0.5s ease;
 }
 
-.card__link_img:hover::after {
+.card__link-img:hover::after {
   opacity: 1;
 }
 
@@ -803,7 +788,7 @@ img, svg {
     #CALLBACK POPUP
 ============================================================================ */
 
-.callback-popup__wrap {
+.callback-popup-wrap {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -882,11 +867,22 @@ img, svg {
   color: white;
   background-color: var(--main-theme-color-1);
   cursor: pointer;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.callback-popup__button_light {
+  color: var(--main-theme-color-1);
+  background-color: white;
+  border: 1px solid var(--main-theme-color-1);
 }
 
 .callback-popup__button:hover {
   background-color: #509498;
+}
+
+.callback-popup__button_light:hover {
+  background-color: var(--main-theme-color-1);
+  color: white;
 }
 
 .callback-popup__input:focus {

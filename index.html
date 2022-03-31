@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Womazing</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
@@ -13,7 +13,7 @@
 
 <body>
   <div class="wrapper">
-    <div id="callbackPopupWrap" class="callback-popup__wrap">
+    <div id="callbackPopupWrap" class="callback-popup-wrap">
       <div class="callback-popup">
         <div id="callbackPopupForm" class="callback-popup-form">
           <a id="callbackPopupClose" href="close" onclick="return false;" class="callback-popup__close">
@@ -22,16 +22,16 @@
           </a>
           <h3 class="callback-popup__title">Заказать обратный звонок</h3>
           <form id="form">
-            <input class="callback-popup__input" type="text" name="name" id="name" placeholder="Имя">
-            <input class="callback-popup__input" type="email" name="email" id="email" placeholder="E-mail">
-            <input class="callback-popup__input" type="tel" name="tel" id="tel" placeholder="Телефон">
+            <input class="callback-popup__input" type="text" name="name" id="name" placeholder="Имя" required>
+            <input class="callback-popup__input" type="email" name="email" id="email" placeholder="E-mail" required>
+            <input class="callback-popup__input" type="tel" name="tel" id="tel" placeholder="Телефон" required>
             <button class="callback-popup__button" type="submit">Заказать звонок</button>
           </form>
         </div>
         <div id="callbackPopupResult" class="callback-popup-result">
-          <h3 class="callback-popup__title_result callback-popup__title">Отлично! Мы скоро вам перезвоним.</h3>
+          <h3 class="callback-popup__title">Отлично! Мы скоро вам перезвоним.</h3>
           <a id="callbackPopupCloseResult" href="close" onclick="return false;"
-            class="callback-popup__close_result button_white">Закрыть</a>
+            class="callback-popup__button callback-popup__button_light">Закрыть</a>
         </div>
       </div>
     </div>
@@ -43,16 +43,16 @@
         <nav class="header__nav nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="index.html" class="nav__link active">Главная</a>
+              <a href="index.html" class="nav__link link active">Главная</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Магазин</a>
+              <a href="shop.html" class="nav__link link">Магазин</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">О бренде</a>
+              <a href="#" class="nav__link link">О бренде</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Контакты</a>
+              <a href="#" class="nav__link link">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -70,7 +70,7 @@
                 fill="#6E9C9F" />
             </svg>
           </a>
-          <a href="tel:+74958235412" class="header__phone phone">+7 (495) 823-54-12</a>
+          <a href="tel:+74958235412" class="header__phone phone link">+7 (495) 823-54-12</a>
           <a href="#" class="cart">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -101,12 +101,12 @@
                       <p class="hero__text">Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом
                         сезоне.
                         Время исследовать.</p>
-                      <a href="#" class="hero__button">
+                      <a href="shop.html" class="hero__button">
                         <svg width="67" height="68" viewBox="0 0 67 68" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <rect width="67" height="67" transform="translate(0 0.5)" fill="#6E9C9F" fill-opacity="0.1" />
                           <path d="M33 20V48M33 48L26 40.8108M33 48L40 40.8108" stroke="#6E9C9F" />
                         </svg>
-                        <span>Открыть магазин</span>
+                        <span class="button_color button">Открыть магазин</span>
                       </a>
                     </div>
                   </div>
@@ -118,12 +118,12 @@
                       <p class="hero__text">Надоело искать себя в сером городе? Настало время новых идей, свежих красок
                         и
                         вдохновения с Womazing!</p>
-                      <a href="#" class="hero__button">
+                      <a href="shop.html" class="hero__button">
                         <svg width="67" height="68" viewBox="0 0 67 68" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <rect width="67" height="67" transform="translate(0 0.5)" fill="#6E9C9F" fill-opacity="0.1" />
                           <path d="M33 20V48M33 48L26 40.8108M33 48L40 40.8108" stroke="#6E9C9F" />
                         </svg>
-                        <span>Открыть магазин</span>
+                        <span class="button_color button">Открыть магазин</span>
                       </a>
                     </div>
                   </div>
@@ -134,12 +134,12 @@
                     <div class="hero__content">
                       <p class="hero__text">Мы обновили ассортимент - легендарные коллекции и новинки от отечественных
                         дизайнеров</p>
-                      <a href="#" class="hero__button">
+                      <a href="shop.html" class="hero__button">
                         <svg width="67" height="68" viewBox="0 0 67 68" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <rect width="67" height="67" transform="translate(0 0.5)" fill="#6E9C9F" fill-opacity="0.1" />
                           <path d="M33 20V48M33 48L26 40.8108M33 48L40 40.8108" stroke="#6E9C9F" />
                         </svg>
-                        <span>Открыть магазин</span>
+                        <span class="button_color button">Открыть магазин</span>
                       </a>
                     </div>
                   </div>
@@ -150,17 +150,17 @@
           </div>
           <div class="hero__col">
             <div class="hero__img">
-              <picture class="hero__img_01">
+              <picture class="hero__img-01">
                 <!-- <source media="(max-width: 1920px)" srcset="img/hero/01@1x.jpg">
                 <source media="(min-width: 1920px)" srcset="img/hero/01@2x.jpg"> -->
                 <img src="img/index/hero/01@1x.jpg" alt="Девушка в пальто Womazing">
               </picture>
-              <picture class="hero__img_02">
+              <picture class="hero__img-02">
                 <!-- <source media="(max-width: 1920px)" srcset="img/hero/02@1x.jpg">
                 <source media="(min-width: 1920px)" srcset="img/hero/02@2x.jpg"> -->
                 <img src="img/index/hero/02@1x.jpg" alt="Девушка в блузке Womazing">
               </picture>
-              <picture class="hero__img_03">
+              <picture class="hero__img-03">
                 <!-- <source media="(max-width: 1920px)" srcset="img/hero/03@1x.jpg">
                 <source media="(min-width: 1920px)" srcset="img/hero/03@2x.jpg"> -->
                 <img src="img/index/hero/03@1x.jpg" alt="Девушка в толстовке Womazing">
@@ -175,7 +175,7 @@
           <div class="new__row">
             <div class="new__col">
               <div class="card">
-                <a href="#" class="card__link_img">
+                <a href="#" class="card__link-img">
                   <img src="img/index/new/01.jpg" alt="Футболка USA">
                 </a>
                 <a href="#" class="card__link">
@@ -186,7 +186,7 @@
             </div>
             <div class="new__col">
               <div class="card">
-                <a href="#" class="card__link_img">
+                <a href="#" class="card__link-img">
                   <img src="img/index/new/02.jpg" alt="Купальник Glow">
                 </a>
                 <a href="#" class="card__link">
@@ -197,7 +197,7 @@
             </div>
             <div class="new__col">
               <div class="card">
-                <a href="#" class="card__link_img">
+                <a href="#" class="card__link-img">
                   <img src="img/index/new/03.jpg" alt="Свитшот Sweet Shot">
                 </a>
                 <a href="#" class="card__link">
@@ -207,7 +207,7 @@
               </div>
             </div>
           </div>
-          <a href="#" class="new__button button_white">Открыть магазин</a>
+          <a href="shop.html" class="new__button button_white button">Открыть магазин</a>
         </div>
       </section>
       <section class="benefits">
@@ -272,7 +272,7 @@
                   каждой
                   девушки.
                 </p>
-                <a href="#" class="about__link">Подробнее о бренде</a>
+                <a href="#" class="about__link link">Подробнее о бренде</a>
               </div>
             </div>
           </div>
@@ -288,58 +288,60 @@
           <nav class="footer__nav nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="index.html" class="nav__link active">Главная</a>
+                <a href="index.html" class="nav__link link active">Главная</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Магазин</a>
+                <a href="shop.html" class="nav__link link">Магазин</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">О бренде</a>
+                <a href="#" class="nav__link link">О бренде</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Контакты</a>
+                <a href="#" class="nav__link link">Контакты</a>
               </li>
             </ul>
           </nav>
-          <a href="tel:+74958235412" class="footer__phone phone">+7 (495) 823-54-12</a>
+          <a href="tel:+74958235412" class="footer__phone phone link">+7 (495) 823-54-12</a>
         </div>
         <div class="footer__row">
           <div class="footer__col">
             <p class="footer__copyright">© Все права защищены</p>
-            <a href="#" class="footer__politics">Политика конфиденциальности</a>
-            <a href="#" class="footer__offer">Публичная оферта</a>
+            <a href="#" class="footer__politics link">Политика конфиденциальности</a>
+            <a href="#" class="footer__offer link">Публичная оферта</a>
           </div>
           <div class="footer__col">
             <nav class="footer__categories categories">
               <ul class="categories__list">
                 <li class="categories__item">
-                  <a href="#" class="categories__link">Пальто</a>
+                  <a href="#" class="categories__link link">Пальто</a>
                 </li>
                 <li class="categories__item">
-                  <a href="#" class="categories__link">Свитшоты</a>
+                  <a href="#" class="categories__link link">Свитшоты</a>
                 </li>
                 <li class="categories__item">
-                  <a href="#" class="categories__link">Кардиганы</a>
+                  <a href="#" class="categories__link link">Кардиганы</a>
                 </li>
                 <li class="categories__item">
-                  <a href="#" class="categories__link">Толстовки</a>
+                  <a href="#" class="categories__link link">Толстовки</a>
                 </li>
               </ul>
             </nav>
           </div>
           <div class="footer__col">
-            <a href="mailto:hello@womazing.com" class="footer__mail">hello@womazing.com</a>
-            <ul class="social__list">
-              <li class="social__item">
-                <a href="#" class="social__link"><span></span></a>
-              </li>
-              <li class="social__item">
-                <a href="#" class="social__link"><span></span></a>
-              </li>
-              <li class="social__item">
-                <a href="#" class="social__link"><span></span></a>
-              </li>
-            </ul>
+            <a href="mailto:hello@womazing.com" class="footer__mail link">hello@womazing.com</a>
+            <div class="social">
+              <ul class="social__list">
+                <li class="social__item">
+                  <a href="#" class="social__link"><span></span></a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link"><span></span></a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link"><span></span></a>
+                </li>
+              </ul>
+            </div>
             <div class="payments">
               <span></span>
             </div>
