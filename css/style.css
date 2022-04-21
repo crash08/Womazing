@@ -885,6 +885,7 @@ img, svg {
   background-color: var(--main-theme-color-1);
   cursor: pointer;
   transition: background-color 0.5s ease, color 0.5s ease;
+  white-space: nowrap;
 }
 
 .callback-popup__button_light {
@@ -1065,6 +1066,7 @@ img, svg {
     font-size: 32px;
   }
   .header__call {
+    visibility: hidden;
     opacity: 0;
     right: 0;
     left: 60px;
@@ -1072,6 +1074,7 @@ img, svg {
     transition: background-color 0.5s ease, opacity 0.3s ease;
   }
   .header__phone {
+    visibility: hidden;
     opacity: 0;
     right: auto;
     left: 90px;
@@ -1079,9 +1082,11 @@ img, svg {
     transition: color 0.5s ease, opacity 0.3s ease;
   }
   .header__call.active {
+    visibility: visible;
     opacity: 1;
   }
   .header__phone.active {
+    visibility: visible;
     opacity: 1;
   }
   .button_color {
@@ -1164,21 +1169,58 @@ img, svg {
 
 @media (max-width: 650px) {
   .hero__container {
+    position: relative;
+    display: block;
+    overflow: hidden;
     padding-left: 50px;
     padding-right: 50px;
   }
-  .hero__col:nth-child(2) {
-    display: none;
+  .hero__slider {
+    padding: 15px;
   }
   .hero__col:nth-child(1) {
-    flex-basis: 100% !important;
+    width: 410px;
+  }
+  .hero__col:nth-child(2) {
+    position: absolute;
+    top: 0;
+  }
+  .hero__title,
+  .hero__content
+  {
+    color: var(--font-color-white);
+  }
+  .hero__button svg rect {
+    fill: white;
+    fill-opacity: 0.5;
   }
   .hero__button-wrap {
     width: 100%;
     justify-content: center;
   }
+  .hero .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: var(--main-theme-color-2);
+  }
   .new__row {
     flex-direction: column;
+  }
+}
+@media (max-width: 510px) {
+  .hero__container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .hero__col:nth-child(1) {
+    width: 100%;
+  }
+  .hero__col:nth-child(2) {
+    left: 0;
+  }
+  .hero__col:nth-child(2),
+  .hero__img,
+  .hero__img img
+  {
+    width: 100%;
   }
 }
 @media (max-width: 480px) {
@@ -1210,6 +1252,13 @@ img, svg {
   .about__name
   {
     font-size: 22px;
+  }
+  .footer__container,
+  .footer__col:nth-child(1),
+  .footer__col:nth-child(3),
+  .footer__politics-block
+  {
+    align-items: center;
   }
   .footer__copyright,
   .footer__politics,

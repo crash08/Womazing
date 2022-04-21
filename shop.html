@@ -37,54 +37,55 @@
     </div>
     <header class="header" id="header">
       <div class="header__container container">
+        <button class="burger" id="burger" aria-label="Меню">
+          <span></span>
+        </button>
         <a href="index.html" class="link-logo">
           <img src="img/logo.svg" alt="Логотип бренда Womazing">
         </a>
-        <nav class="header__nav nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="index.html" class="nav__link link">Главная</a>
+        <nav id="nav" class="header__nav nav">
+          <ul class="header__nav-list nav__list">
+            <li class="header__nav-item nav__item">
+              <a href="index.html" class="header__nav-link nav__link link">Главная</a>
             </li>
-            <li class="nav__item">
-              <a href="shop.html" class="nav__link link active">Магазин</a>
+            <li class="header__nav-item nav__item">
+              <a href="shop.html" class="header__nav-link nav__link link active">Магазин</a>
             </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link link">О бренде</a>
+            <li class="header__nav-item nav__item">
+              <a href="#" class="header__nav-link nav__link link">О бренде</a>
             </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link link">Контакты</a>
+            <li class="header__nav-item nav__item">
+              <a href="#" class="header__nav-link nav__link link">Контакты</a>
             </li>
           </ul>
         </nav>
-        <div class="header__right">
-          <a id="headerCall" href="call" onclick="return false;" class="header__call">
-            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M2.25235 2.81643C0.750523 4.31823 0.750523 6.7618 2.25232 8.2636L3.05001 7.46592C1.9881 6.40402 1.98807 4.67613 3.05004 3.61417C4.11197 2.55224 5.83985 2.55224 6.90179 3.61414L7.69947 2.81646C6.1977 1.31463 3.75412 1.31466 2.25235 2.81643Z"
-                fill="#6E9C9F" />
-              <path
-                d="M3.84133 4.39119C3.20916 5.02336 3.20913 6.05201 3.8413 6.68421L4.63901 5.88653C4.54584 5.79335 4.49453 5.66947 4.49453 5.53772C4.49453 5.40599 4.54587 5.2821 4.63904 5.18893C4.73221 5.09576 4.8561 5.04444 4.98782 5.04444C5.11958 5.04444 5.24349 5.09576 5.33664 5.18893L6.13432 4.39122C5.50215 3.75902 4.4735 3.75902 3.84133 4.39119Z"
-                fill="#6E9C9F" />
-              <path
-                d="M13.7482 2.43513L11.855 0.548477L7.92331 4.47367L9.44752 6.04781C9.19208 6.50125 8.63784 7.3699 7.69327 8.31447C6.74859 9.25918 5.8736 9.81971 5.41581 10.0792L3.87255 8.55562L0.00219727 12.4029L1.88504 14.2983C2.60479 15.0181 3.69992 15.2046 4.61014 14.7625C5.99915 14.0879 8.0954 12.8431 10.1942 10.7443C12.2931 8.64552 13.5378 6.54924 14.2124 5.16023C14.3723 4.83109 14.4499 4.47787 14.4499 4.12692C14.4499 3.5072 14.2077 2.89464 13.7482 2.43513ZM13.1977 4.66732C12.5609 5.97846 11.3845 7.95865 9.39655 9.94658C7.40862 11.9345 5.42842 13.1109 4.11729 13.7477C3.63929 13.9799 3.06281 13.8806 2.68414 13.5019L1.59739 12.4079L3.87537 10.1436L5.19009 11.4415L5.54184 11.2849C5.59899 11.2595 6.95941 10.6438 8.4911 9.11215C10.0238 7.57947 10.6266 6.23054 10.6515 6.17386L10.804 5.82683L9.50671 4.48705L11.8558 2.14178L12.9511 3.23327C13.3306 3.6133 13.4298 4.18952 13.1977 4.66732Z"
-                fill="#6E9C9F" />
-            </svg>
-          </a>
-          <a href="tel:+74958235412" class="header__phone phone link">+7 (495) 823-54-12</a>
-          <a href="#" class="cart">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M23.8454 8.2243C23.7281 8.10906 23.5642 8.05442 23.4012 8.07624H17.0343V5.26295C17.0343 2.4826 14.7804 0.228699 12.0001 0.228699C9.21971 0.228699 6.96582 2.4826 6.96582 5.26295V8.07624H0.598861C0.421164 8.07624 0.243523 8.07624 0.154646 8.2243C0.0352739 8.33902 -0.0201042 8.5051 0.00659291 8.66851L2.22761 20.81C2.53789 22.5037 4.00034 23.7431 5.72199 23.7713H18.278C20.0046 23.7289 21.464 22.4797 21.7724 20.7804L23.9934 8.66851C24.0201 8.5051 23.9647 8.33902 23.8454 8.2243ZM8.1503 5.26295C8.1503 3.13682 9.87388 1.41324 12 1.41324C14.1261 1.41324 15.8497 3.13682 15.8497 5.26295V8.07624H8.1503V5.26295ZM20.5879 20.6323C20.3884 21.7547 19.4179 22.5759 18.278 22.5868H5.72199C4.58212 22.5759 3.61161 21.7547 3.41215 20.6323L1.30959 9.26078H22.6904L20.5879 20.6323Z"
-                fill="black" />
-              <path
-                d="M16.4421 15.0354C16.7692 15.0354 17.0343 14.7702 17.0343 14.4431V12.6663C17.0343 12.3392 16.7692 12.074 16.4421 12.074C16.1149 12.074 15.8498 12.3392 15.8498 12.6663V14.4431C15.8497 14.7702 16.1149 15.0354 16.4421 15.0354Z"
-                fill="black" />
-              <path
-                d="M7.55803 15.0354C7.88514 15.0354 8.1503 14.7702 8.1503 14.4431V12.6663C8.1503 12.3392 7.88514 12.074 7.55803 12.074C7.23092 12.074 6.96576 12.3392 6.96576 12.6663V14.4431C6.96576 14.7702 7.23092 15.0354 7.55803 15.0354Z"
-                fill="black" />
-            </svg>
-          </a>
-        </div>
+        <a id="headerCall" href="call" onclick="return false;" class="header__call">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.25235 2.81643C0.750523 4.31823 0.750523 6.7618 2.25232 8.2636L3.05001 7.46592C1.9881 6.40402 1.98807 4.67613 3.05004 3.61417C4.11197 2.55224 5.83985 2.55224 6.90179 3.61414L7.69947 2.81646C6.1977 1.31463 3.75412 1.31466 2.25235 2.81643Z"
+              fill="#6E9C9F" />
+            <path
+              d="M3.84133 4.39119C3.20916 5.02336 3.20913 6.05201 3.8413 6.68421L4.63901 5.88653C4.54584 5.79335 4.49453 5.66947 4.49453 5.53772C4.49453 5.40599 4.54587 5.2821 4.63904 5.18893C4.73221 5.09576 4.8561 5.04444 4.98782 5.04444C5.11958 5.04444 5.24349 5.09576 5.33664 5.18893L6.13432 4.39122C5.50215 3.75902 4.4735 3.75902 3.84133 4.39119Z"
+              fill="#6E9C9F" />
+            <path
+              d="M13.7482 2.43513L11.855 0.548477L7.92331 4.47367L9.44752 6.04781C9.19208 6.50125 8.63784 7.3699 7.69327 8.31447C6.74859 9.25918 5.8736 9.81971 5.41581 10.0792L3.87255 8.55562L0.00219727 12.4029L1.88504 14.2983C2.60479 15.0181 3.69992 15.2046 4.61014 14.7625C5.99915 14.0879 8.0954 12.8431 10.1942 10.7443C12.2931 8.64552 13.5378 6.54924 14.2124 5.16023C14.3723 4.83109 14.4499 4.47787 14.4499 4.12692C14.4499 3.5072 14.2077 2.89464 13.7482 2.43513ZM13.1977 4.66732C12.5609 5.97846 11.3845 7.95865 9.39655 9.94658C7.40862 11.9345 5.42842 13.1109 4.11729 13.7477C3.63929 13.9799 3.06281 13.8806 2.68414 13.5019L1.59739 12.4079L3.87537 10.1436L5.19009 11.4415L5.54184 11.2849C5.59899 11.2595 6.95941 10.6438 8.4911 9.11215C10.0238 7.57947 10.6266 6.23054 10.6515 6.17386L10.804 5.82683L9.50671 4.48705L11.8558 2.14178L12.9511 3.23327C13.3306 3.6133 13.4298 4.18952 13.1977 4.66732Z"
+              fill="#6E9C9F" />
+          </svg>
+        </a>
+        <a id="headerPhone" href="tel:+74958235412" class="header__phone phone link">+7 (495) 823-54-12</a>
+        <a href="#" class="cart">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M23.8454 8.2243C23.7281 8.10906 23.5642 8.05442 23.4012 8.07624H17.0343V5.26295C17.0343 2.4826 14.7804 0.228699 12.0001 0.228699C9.21971 0.228699 6.96582 2.4826 6.96582 5.26295V8.07624H0.598861C0.421164 8.07624 0.243523 8.07624 0.154646 8.2243C0.0352739 8.33902 -0.0201042 8.5051 0.00659291 8.66851L2.22761 20.81C2.53789 22.5037 4.00034 23.7431 5.72199 23.7713H18.278C20.0046 23.7289 21.464 22.4797 21.7724 20.7804L23.9934 8.66851C24.0201 8.5051 23.9647 8.33902 23.8454 8.2243ZM8.1503 5.26295C8.1503 3.13682 9.87388 1.41324 12 1.41324C14.1261 1.41324 15.8497 3.13682 15.8497 5.26295V8.07624H8.1503V5.26295ZM20.5879 20.6323C20.3884 21.7547 19.4179 22.5759 18.278 22.5868H5.72199C4.58212 22.5759 3.61161 21.7547 3.41215 20.6323L1.30959 9.26078H22.6904L20.5879 20.6323Z"
+              fill="black" />
+            <path
+              d="M16.4421 15.0354C16.7692 15.0354 17.0343 14.7702 17.0343 14.4431V12.6663C17.0343 12.3392 16.7692 12.074 16.4421 12.074C16.1149 12.074 15.8498 12.3392 15.8498 12.6663V14.4431C15.8497 14.7702 16.1149 15.0354 16.4421 15.0354Z"
+              fill="black" />
+            <path
+              d="M7.55803 15.0354C7.88514 15.0354 8.1503 14.7702 8.1503 14.4431V12.6663C8.1503 12.3392 7.88514 12.074 7.55803 12.074C7.23092 12.074 6.96576 12.3392 6.96576 12.6663V14.4431C6.96576 14.7702 7.23092 15.0354 7.55803 15.0354Z"
+              fill="black" />
+          </svg>
+        </a>
       </div>
     </header>
     <main class="main">
@@ -225,35 +226,38 @@
     </main>
     <footer class="footer">
       <div class="footer__container container">
-        <div class="footer__row">
-          <a href="index.html" class="link-logo">
-            <img src="img/logo.svg" alt="Логотип бренда Womazing">
-          </a>
-          <nav class="footer__nav nav">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a href="index.html" class="nav__link link">Главная</a>
-              </li>
-              <li class="nav__item">
-                <a href="shop.html" class="nav__link link active">Магазин</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link link">О бренде</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link link">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <a href="tel:+74958235412" class="footer__phone phone link">+7 (495) 823-54-12</a>
-        </div>
-        <div class="footer__row">
-          <div class="footer__col">
+        <div class="footer__col">
+          <div class="footer__logo-wrap">
+            <a href="index.html" class="link-logo">
+              <img src="img/logo.svg" alt="Логотип бренда Womazing">
+            </a>
+          </div>
+          <div class="footer__politics-block">
             <p class="footer__copyright">© Все права защищены</p>
             <a href="#" class="footer__politics link">Политика конфиденциальности</a>
             <a href="#" class="footer__offer link">Публичная оферта</a>
           </div>
-          <div class="footer__col">
+        </div>
+        <div class="footer__col">
+          <div class="footer__nav-wrap">
+            <nav class="footer__nav nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="index.html" class="nav__link link">Главная</a>
+                </li>
+                <li class="nav__item">
+                  <a href="shop.html" class="nav__link link active">Магазин</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link link">О бренде</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__categories-wrap">
             <nav class="footer__categories categories">
               <ul class="categories__list">
                 <li class="categories__item">
@@ -271,24 +275,25 @@
               </ul>
             </nav>
           </div>
-          <div class="footer__col">
-            <a href="mailto:hello@womazing.com" class="footer__mail link">hello@womazing.com</a>
-            <div class="social">
-              <ul class="social__list">
-                <li class="social__item">
-                  <a href="#" class="social__link"><span></span></a>
-                </li>
-                <li class="social__item">
-                  <a href="#" class="social__link"><span></span></a>
-                </li>
-                <li class="social__item">
-                  <a href="#" class="social__link"><span></span></a>
-                </li>
-              </ul>
-            </div>
-            <div class="payments">
-              <span></span>
-            </div>
+        </div>
+        <div class="footer__col">
+          <a href="tel:+74958235412" class="footer__phone phone link">+7 (495) 823-54-12</a>
+          <a href="mailto:hello@womazing.com" class="footer__mail link">hello@womazing.com</a>
+          <div class="social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a href="#" class="social__link"><span></span></a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link"><span></span></a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link"><span></span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="payments">
+            <span></span>
           </div>
         </div>
       </div>

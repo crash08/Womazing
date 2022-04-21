@@ -61,4 +61,23 @@ window.addEventListener('DOMContentLoaded', function () {
       })
     //.catch(err => console.log(err));
   })
+
+  //NAV BURGER ================================================================
+  document.querySelector('#burger').addEventListener('click', function () {
+    document.querySelector('#burger').classList.toggle('active');
+    document.querySelector('#nav').classList.toggle('active');
+    document.querySelector('#headerCall').classList.toggle('active');
+    document.querySelector('#headerPhone').classList.toggle('active');
+    document.querySelector('body').classList.toggle('lock');
+  })
+
+  document.querySelectorAll('.nav__link').forEach(function (navLink) {
+    navLink.addEventListener('click', function () {
+      document.querySelector('#burger').classList.remove('active');
+      document.querySelector('#nav').classList.remove('active');
+      document.querySelector('#headerCall').classList.toggle('active');
+      document.querySelector('#headerPhone').classList.toggle('active');
+      document.querySelector('body').classList.remove('lock');
+    })
+  })
 })
