@@ -1266,5 +1266,28 @@ img, svg {
   {
     font-size: 12px;
   }
+  .callback-popup-form {
+    padding: 30px;
+  }
+  .callback-popup__input {
+    height: 30px;
+  }
+  .callback-popup__title {
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+  .callback-popup__close {
+    box-sizing: content-box;
+    top: 0px;
+    right: 0px;
+    border: 12px solid transparent;
+  }
+  .callback-popup__button {
+    padding: 18px 60px;
+  }
+  .callback-popup-result {
+    padding: 30px;
+  }
 }
 

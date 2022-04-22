@@ -12,29 +12,30 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <div id="callbackPopupWrap" class="callback-popup-wrap">
-      <div class="callback-popup">
-        <div id="callbackPopupForm" class="callback-popup-form">
-          <a id="callbackPopupClose" href="close" onclick="return false;" class="callback-popup__close">
-            <span></span>
-            <span></span>
-          </a>
-          <h3 class="callback-popup__title">Заказать обратный звонок</h3>
-          <form id="form">
-            <input class="callback-popup__input" type="text" name="name" id="name" placeholder="Имя" required>
-            <input class="callback-popup__input" type="email" name="email" id="email" placeholder="E-mail" required>
-            <input class="callback-popup__input" type="tel" name="tel" id="tel" placeholder="Телефон" required>
-            <button class="callback-popup__button" type="submit">Заказать звонок</button>
-          </form>
-        </div>
-        <div id="callbackPopupResult" class="callback-popup-result">
-          <h3 class="callback-popup__title">Отлично! Мы скоро вам перезвоним.</h3>
-          <a id="callbackPopupCloseResult" href="close" onclick="return false;"
-            class="callback-popup__button callback-popup__button_light">Закрыть</a>
-        </div>
+  <h1 class="visually-hidden">Womazing бренд одежды</h1>
+  <div id="callbackPopupWrap" class="callback-popup-wrap">
+    <div class="callback-popup">
+      <div id="callbackPopupForm" class="callback-popup-form">
+        <a id="callbackPopupClose" href="close" onclick="return false;" class="callback-popup__close">
+          <span></span>
+          <span></span>
+        </a>
+        <h3 class="callback-popup__title">Заказать обратный звонок</h3>
+        <form id="form">
+          <input class="callback-popup__input" type="text" name="name" id="name" placeholder="Имя" required>
+          <input class="callback-popup__input" type="email" name="email" id="email" placeholder="E-mail" required>
+          <input class="callback-popup__input" type="tel" name="tel" id="tel" placeholder="Телефон" required>
+          <button class="callback-popup__button" type="submit">Заказать звонок</button>
+        </form>
+      </div>
+      <div id="callbackPopupResult" class="callback-popup-result">
+        <h3 class="callback-popup__title">Отлично! Мы скоро вам перезвоним.</h3>
+        <a id="callbackPopupCloseResult" href="close" onclick="return false;"
+          class="callback-popup__button callback-popup__button_light">Закрыть</a>
       </div>
     </div>
+  </div>
+  <div class="wrapper">
     <header class="header" id="header">
       <div class="header__container container">
         <button class="burger" id="burger" aria-label="Меню">

@@ -140,6 +140,10 @@
   .shop-categories__list {
     flex-wrap: wrap;
   }
+  .shop-categories__item {
+    width: auto;
+    flex: 1 0 auto;
+  }
 }
 
 @media (max-width: 374px) {
